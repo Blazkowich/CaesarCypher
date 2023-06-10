@@ -1,7 +1,9 @@
 ﻿using System.Collections.Concurrent;
-using decryption;
+using System.IO;
 using encryption;
+using decryption;
 using displayInputOutput;
+using System.Globalization;
 
 namespace caesarcypher
 {
@@ -9,13 +11,14 @@ namespace caesarcypher
     {
         static void Main(string[] args)
         {
-            string plainText = "Attack at the night to bitches";
-            string cipherText = "dwwdfn dw wkh qljkw wr elwfkhv";
+            string fileDirectory = @"C:\Users\LEGION Y520\Desktop\EncDecr\rncdec.txt";
+            string plainText = "Why Are You Geh";
             int uniNumber = 3;
 
-            Display.DisplayEncrypted(plainText, uniNumber);
-            Display.DisplayDecrypted(cipherText, uniNumber);
+ 
+            Display.DisplayEncryptDoc(plainText, uniNumber,fileDirectory);
 
+            Display.DisplayDecryption(plainText, uniNumber, fileDirectory);
         }
     }
 }
